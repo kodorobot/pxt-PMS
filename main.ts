@@ -1,4 +1,4 @@
-//% weight=0 color=#0a8c92 block="PMS"
+//% weight=0 color=#0a8c92 block="PMS" icon="\uf0c2"
 namespace PMS {
     let init = false
     let pm1_air = 0
@@ -78,7 +78,8 @@ namespace PMS {
         }
     }
 
-    //% blockId="getData" block="update data"
+    //% blockId="getData" block="read data | %option"
+    //% option.fieldEditor="textdropdown"
     //% weight=90 blockGap=20 blockInlineInputs=true   
     export function printData(option: Options): number {
         switch (option) {
