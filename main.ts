@@ -60,27 +60,22 @@ namespace PMS {
 	            else if (raw_data.length == 2 && raw_data[1] != 77) raw_data = []
 	            else if (raw_data.length > 3) data_length = raw_data[2] * 256 + raw_data[3]
 	            if (raw_data.length == 32 && data_length == 28){
-	            	let checksum = 0
-	            	for(let i = 0;i < 30;i++) checksum += raw_data[i]
-	            	if (checksum == raw_data[31] * 256 + raw_data[32]){
-                        pm1_air = raw_data[10] * 256 + raw_data[11]
-                        pm25_air = raw_data[12] * 256 + raw_data[13]
-                        pm10_air = raw_data[14] * 256 + raw_data[15]
-                        pm03_count = raw_data[16] * 256 + raw_data[17]
-                        pm05_count = raw_data[18] * 256 + raw_data[19]
-                        pm10_count = raw_data[20] * 256 + raw_data[21]
-                        pm25_count = raw_data[22] * 256 + raw_data[23]
-                        temperature = raw_data[24] * 256 + raw_data[25]
-                        humidity = raw_data[26] * 256 + raw_data[27]
-	            	} else raw_data = []
+	            	pm1_air = raw_data[10] * 256 + raw_data[11]
+                    pm25_air = raw_data[12] * 256 + raw_data[13]
+                    pm10_air = raw_data[14] * 256 + raw_data[15]
+                    pm03_count = raw_data[16] * 256 + raw_data[17]
+                    pm05_count = raw_data[18] * 256 + raw_data[19]
+                    pm10_count = raw_data[20] * 256 + raw_data[21]
+                    pm25_count = raw_data[22] * 256 + raw_data[23]
+                    temperature = raw_data[24] * 256 + raw_data[25]
+                    humidity = raw_data[26] * 256 + raw_data[27]
 	            }
             }
         }
     }
 
     //% blockId="printData" block="read data | %option"
-    //% option.fieldEditor="textdropdown"
-    //% weight=90 blockGap=20 blockInlineInputs=true   
+    //% weight=80 blockGap=20 blockInlineInputs=true   
     export function printData(option: Options): number {
         switch (option) {
             case 0: {
