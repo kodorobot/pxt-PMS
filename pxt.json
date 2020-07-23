@@ -1,0 +1,20 @@
+{
+    "name": "PMS",
+    "version": "0.0.1",
+    "description": "PMS",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+    },
+    "files": [
+        "README.md",
+        "main.ts"
+    ],
+    "testFiles": [
+    ],
+    "public": true,
+    "supportedTargets": [
+        "microbit"
+    ],
+    "preferredEditor": "blocksprj"
+}
