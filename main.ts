@@ -78,7 +78,7 @@ namespace PMS {
         }
     }
 
-    //% blockId="getData" block="read data | %option"
+    //% blockId="printData" block="read data | %option"
     //% option.fieldEditor="textdropdown"
     //% weight=90 blockGap=20 blockInlineInputs=true   
     export function printData(option: Options): number {
