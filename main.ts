@@ -1,15 +1,15 @@
 //% weight=0 color=#0a8c92 block="PMS"
 namespace PMS {
     let init = false
-    var pm1_air = 0
-    var pm25_air = 0
-    var pm10_air = 0
-    var pm03_count = 0
-    var pm05_count = 0
-    var pm10_count = 0
-    var pm25_count = 0
-    var temperature = 0
-    var humidity = 0
+    let pm1_air = 0
+    let pm25_air = 0
+    let pm10_air = 0
+    let pm03_count = 0
+    let pm05_count = 0
+    let pm10_count = 0
+    let pm25_count = 0
+    let temperature = 0
+    let humidity = 0
 
     export enum Options {
         //% blockId="pm1_air" block="pm1.0 concentration"
