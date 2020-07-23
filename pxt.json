@@ -4,13 +4,11 @@
     "description": "PMS",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
+        "core": "*"
     },
     "files": [
         "README.md",
         "main.ts"
-    ],
-    "testFiles": [
     ],
     "public": true,
     "supportedTargets": [
