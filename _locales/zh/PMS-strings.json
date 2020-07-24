@@ -1,0 +1,18 @@
+{
+    "PMS.setSerial|block": "設定pm2.5感測器連結到引腳 %pin",
+    "PMS.getData|block": "更新資料",
+    "PMS.printData|block": "PMS5003 %option",
+    "PMS.printData2|block": "PMS3003 %option",
+    "PMS.Options.pm1a|block": "pm1.0 濃度",
+    "PMS.Options.pm25a|block": "pm2.5 濃度",
+    "PMS.Options.pm10a|block": "pm10 濃度",
+    "PMS.Options.pm03c|block": "pm0.3 顆粒數量",
+    "PMS.Options.pm05c|block": "pm0.5 顆粒數量",
+    "PMS.Options.pm10c|block": "pm1.0 顆粒數量",
+    "PMS.Options.pm25c|block": "pm2.5 顆粒數量",
+    "PMS.Options.temperature|block": "溫度",
+    "PMS.Options.humidity|block": "溼度",
+    "PMS.Options2.pm1a|block": "pm1.0 濃度",
+    "PMS.Options2.pm25a|block": "pm2.5 濃度",
+    "PMS.Options2.pm10a|block": "pm10 濃度"
+}
