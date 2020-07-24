@@ -32,6 +32,15 @@ namespace PMS {
         humidity = 8,
     }
 
+    export enum Options2 {
+        //% blockId="pm1_air" block="pm1.0 concentration"
+        pm1a = 0,
+        //% blockId="pm25_air" block="pm2.5 concentration"
+        pm25a = 1,
+        //% blockId="pm10_air" block="pm10 concentration"
+        pm10a = 2,
+    }
+
 
     //% blockId="setSerial" block="set PMS to %pin"
     //% weight=100 blockGap=20 blockInlineInputs=true
@@ -70,12 +79,17 @@ namespace PMS {
                     temperature = (raw_data[24] * 256 + raw_data[25]) / 10
                     humidity = (raw_data[26] * 256 + raw_data[27]) / 10
                 }
-                else if (raw_data.length > 32) raw_data = []
+                else if (raw_data.length == 24 && data_length == 20) {
+                    pm1_air = raw_data[10] * 256 + raw_data[11]
+                    pm25_air = raw_data[12] * 256 + raw_data[13]
+                    pm10_air = raw_data[14] * 256 + raw_data[15]
+                    break
+                }
             }
         }
     }
 
-    //% blockId="printData" block="read data | %option"
+    //% blockId="printData" block="read PMS5003 | %option"
     //% weight=80 blockGap=20 blockInlineInputs=true   
     export function printData(option: Options): number {
         switch (option) {
@@ -113,6 +127,29 @@ namespace PMS {
             }
             case 8: {
                 return humidity
+                break
+            }
+            default: {
+                return 0
+                break
+            }
+        }
+    }
+
+    //% blockId="printData2" block="read PMS3003 | %option"
+    //% weight=70 blockGap=20 blockInlineInputs=true   
+    export function printData2(option: Options2): number {
+        switch (option) {
+            case 0: {
+                return pm1_air
+                break
+            }
+            case 1: {
+                return pm25_air
+                break
+            }
+            case 2: {
+                return pm10_air
                 break
             }
             default: {
