@@ -89,7 +89,7 @@ namespace PMS {
         }
     }
 
-    //% blockId="printData" block="read PMS5003 | %option"
+    //% blockId="printData" block="PMS5003 | %option"
     //% weight=80 blockGap=20 blockInlineInputs=true   
     export function printData(option: Options): number {
         switch (option) {
@@ -136,7 +136,7 @@ namespace PMS {
         }
     }
 
-    //% blockId="printData2" block="read PMS3003 | %option"
+    //% blockId="printData2" block="PMS3003 | %option"
     //% weight=70 blockGap=20 blockInlineInputs=true   
     export function printData2(option: Options2): number {
         switch (option) {

@@ -4,11 +4,14 @@
     "description": "PMS",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
     },
     "files": [
         "README.md",
+        "_locales/zh/PMS-strings.json",
         "main.ts"
+    ],
+    "testFiles": [
     ],
     "public": true,
     "supportedTargets": [
