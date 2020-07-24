@@ -67,8 +67,8 @@ namespace PMS {
                     pm05_count = raw_data[18] * 256 + raw_data[19]
                     pm10_count = raw_data[20] * 256 + raw_data[21]
                     pm25_count = raw_data[22] * 256 + raw_data[23]
-                    temperature = raw_data[24] * 256 + raw_data[25]
-                    humidity = raw_data[26] * 256 + raw_data[27]
+                    temperature = (raw_data[24] * 256 + raw_data[25]) / 10
+                    humidity = (raw_data[26] * 256 + raw_data[27]) / 10
 	            }
             }
         }
