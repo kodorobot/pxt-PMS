@@ -69,7 +69,8 @@ namespace PMS {
                     pm25_count = raw_data[22] * 256 + raw_data[23]
                     temperature = (raw_data[24] * 256 + raw_data[25]) / 10
                     humidity = (raw_data[26] * 256 + raw_data[27]) / 10
-	            }
+                }
+                else if (raw_data.length > 32) raw_data = []
             }
         }
     }
